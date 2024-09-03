@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- End Google Tag Manager -->
+    <title>Pavni Engineering</title>
+    <meta name="keywords" content="Pavani Engineering">
+    <meta name="description" content="Pavani Engineering">
+    <link rel="icon" type="image/x-icon" href="./images/pavni-logo-2.png">
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Pavani Engineering" />
+    <meta property="og:description" content="Pavani Engineering" />
+    <!-- <meta property="og:image" content="https://nebulaaitsolutions.com/assets/images/headercolor-logo.svg"> -->
+    <meta property="og:image" content="./assets/images/headercolor-logo.svg">
+    <meta property="og:url" content="Pavani Engineering" />
+    <meta property="og:site_name" content="Pavani Engineering" />
+    <!-- <script src=""></script> -->
+    <script type="text/javascript" src="https://nebulaaitsolutions.com/assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="https://nebulaaitsolutions.com/assets/js/popper.min.js"></script>
+    <script type="text/javascript" src="https://nebulaaitsolutions.com/assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://nebulaaitsolutions.com/assets/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="https://nebulaaitsolutions.com/assets/js/parallax.min.js"></script>
+    <script type="text/javascript" src="https://nebulaaitsolutions.com/assets/js/custom.js"></script>
+    <script type="text/javascript" src="https://nebulaaitsolutions.com/assets/js/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="https://nebulaaitsolutions.com/assets/js/aos.js"></script>
+
+
+    <style>
+        .aboutproj {
+            background-image: url(./images/project-banner.jpg);
+            /* background-image: url(../images/homeabout-bg.png); */
+            background-size: cover;
+            padding: 100px 0px 50px;
+            color: #fff;
+            position: relative;
+            background-attachment: fixed;
+            z-index: 1;
+            overflow: hidden;
+            /* Ensures the pseudo-element does not exceed the section */
+        }
+
+        /* Adding a black opacity overlay */
+        .aboutproj::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            /* Adjust 0.5 to change opacity level */
+            z-index: -1;
+            /* Ensures the overlay is behind the content */
+        }
+
+
+        .news-bg {
+            padding: 30px 25px;
+            height: 340px;
+            background-color: white;
+            overflow: hidden;
+            /* Keeps content within the box */
+        }
+
+        .news-bg h3 {
+            font-size: 20px;
+            color: #0E4D92;
+            margin-bottom: 15px;
+            margin-top: 15px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .news-bg h3 a {
+            color: #0E4D92;
+        }
+
+        .news-bg h6 {
+            color: #B4AFAF;
+            font-weight: 500;
+        }
+
+        .news-bg p {
+            font-size: 14px;
+            color: #0f2e1f;
+            margin-bottom: 0;
+            /* Removes bottom margin */
+            display: block;
+            /* Ensures block layout */
+            padding-right: 10px;
+            /* Space for scrollbar if necessary */
+        }
+
+        .news-bg .p-div {
+            max-height: 120px;
+            /* Maximum height before scrolling */
+            overflow-y: scroll;
+            /* Adds vertical scroll if content overflows */
+        }
+
+        /* New Styles for Grid Layout */
+        .news-event .row {
+            display: flex;
+            flex-wrap: wrap;
+            margin-right: -15px;
+            margin-left: -15px;
+        }
+
+        .news-event .item {
+            width: 33.3333%;
+            /* Three items per row */
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-bottom: 30px;
+            /* Space between rows */
+        }
+
+        .news-event .img-wrap img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Media query for tablets (768px and below) */
+        @media (max-width: 768px) {
+            .news-event .item {
+                width: 50%;
+                /* Two items per row on tablets */
+            }
+        }
+
+        /* Media query for mobile phones (576px and below) */
+        @media (max-width: 576px) {
+            .news-event .item {
+                width: 100%;
+                /* One item per row on mobile */
+            }
+
+            .news-bg {
+                padding: 20px 15px;
+                /* Reduce padding for smaller screens */
+                height: auto;
+                /* Allow flexible height */
+            }
+
+            .aboutproj .col-md-6 {
+                margin: 0 auto;
+                /* Center about section on smaller screens */
+                padding: 15px;
+                /* Add padding for better spacing */
+            }
+
+            .aboutproj h2 {
+                font-size: 30px;
+                /* Adjust heading size for smaller screens */
+            }
+        }
+
+        /* Additional styling for very small screens (375px and below) */
+        @media (max-width: 375px) {
+            .aboutproj h2 {
+                font-size: 24px;
+                /* Further adjust heading size for very small screens */
+            }
+
+            .news-bg h3 {
+                font-size: 18px;
+                /* Adjust heading size inside news items */
+            }
+
+            .news-bg p {
+                font-size: 12px;
+                /* Adjust paragraph size inside news items */
+            }
+        }
+    </style>
+
+
+
+<body>
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PTHVNLN" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <link preconnect href="https://nebulaaitsolutions.com/assets/css/bootstrap.min.css" media="all" rel="stylesheet">
+    <!-- <link preconnect href="https://nebulaaitsolutions.com/assets/css/bootstrap-custom.css" media="all" rel="stylesheet"> -->
+
+    <link rel="icon" type="image/x-icon" href="./images/pavni-logo-2.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="./assests/css/bootstrap.min.css" media="all">
+    <link rel="stylesheet" href="./assests/css/bootstrap-custom.css" media="all">
+    <link rel="stylesheet" href="./assests/css/media.css" media="all">
+    <link rel="stylesheet" href="./assests/css/owl.theme.default.min.css" media="all">
+    <link rel="stylesheet" href="./assests/css/owl.carousel.min.css" media="all">
+    <link rel="stylesheet" href="./assests/css/slick.css" media="all">
+    <link rel="stylesheet" href="./assests/css/svg-style.css" media="all">
+    <link rel="stylesheet" href="./assests/css/svg-style.css" media="all">
+    <link rel="stylesheet" href="./assests/css/animate.min.css" media="all">
+    <link rel="stylesheet" href="./assests/css/aos.css" media="all">
+
+    <link dns-prefetch rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link preconnect href="https://fonts.googleapis.com/css2?family=Poppins:wght@10;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Google Tag Manager -->
+    <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=JMM_m5bVF2AVQvuM-iGi7qHMYok6FIB0szCXbMKEPZPgfKJ-gLsWlZhRaD0Ajt8in5YeME_R4AEMVA7UoIK6Ng" charset="UTF-8"></script>
+    <script>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-PTHVNLN');
+    </script>
+    <style>
+        .navbar-brand img {
+            position: absolute;
+            left: 0px;
+            width: 11%;
+            top: 15px;
+        }
+
+        .animated-nav {
+            -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+            background: #0e4d92a3;
+        }
+
+        .animated-nav.infinite {
+            -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+        }
+
+        .animated-nav.hinge {
+            -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+        }
+
+        .animated-nav.bounceIn,
+        .animated-nav.bounceOut,
+        .animated-nav.flipOutX,
+        .animated-nav.flipOutY {
+            -webkit-animation-duration: 0.75s;
+            animation-duration: 0.75s;
+        }
+    </style>
+
+    <header class="animated-nav">
+        <div class="main-head">
+            <div class="container-fluid">
+                <nav class="navbar navbar-expand-md">
+                    <a class="navbar-brand" href="#">
+                        <img src="./images/pavni-logo.png" class="img-fluid whitelogo" style="max-width: 50px;height: auto; " alt="logo">
+                        <img src="./images/pavni-logo.png" class="img-fluid colorlogo" style="max-width: 50px;height: auto; " alt="logo">
+                    </a>
+                    <div class="pavni-logo" style="    margin-right: 57px;color: seagreen;margin-top: 5px;">
+                        <h2>PAVNI ENGINEERING Pvt Ltd</h2>
+                    </div>
+                    <button class="navbar-toggler" type="button" id="mobile-menu-action" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="icon-bar one"></span>
+                        <span class="icon-bar two"></span>
+                        <span class="icon-bar three"></span>
+                    </button>
+                    <div class="mobile-navbar navbar-mob">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="./index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./aboutus.html">About Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./whyus.html">Why Us?</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./quality.html">Quality</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./sustainability.html">Sustainability</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./services.html">Services</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./growth.html">Growth</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./projects.html">Projects</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./clients.html">Clients</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./contact-us.html">Contact Us</a>
+                            </li>
+                            <!-- <li class="nav-item">
+                <a class="common-btn" href="mailto:helpdesk@nebulaaitsolutions.com">
+                  <div class="call-icon"><img src="https://nebulaaitsolutions.com/assets/images/envelope.svg" alt="call"></div> Support Center
+                </a>
+              </li> -->
+                        </ul>
+                    </div>
+
+            </div>
+        </div>
+    </header>
+
+    <div class="main-wrapper">
+        <section class="aboutproj">
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+                <div class="row">
+                    <div class="col-md-6 offset-md-6">
+                        <!-- <h3 class="f-light subheading">PROJECTS</h3> -->
+                        <h2 class="f-semibold heading" style="font-size: 40px;">PAVNI ENGINEERING PVT LTD</h2>
+                        <p class="f-light">PAVNI ENGINEERING Established in 2016, We provide 100% dedicated team to achieve our clients' requirements for project-based hiring, contract staffing, recruitment solutions...</p>
+
+                        <a href="./aboutus.html" class="common-btn">Know More <span class="icon-right-arrow11"></span></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="news-event" id="newsevent" style="background:#b2bfc16e;">
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+                <h3 class="f-semibold heading text-center blue">PROJECTS</h3>
+                <div class="row">
+
+                    <div class="item">
+                        <div class="img-wrap">
+                            <img src="./images/project 1.jpg" class="img-fluid" alt="">
+                        </div>
+                        <div class="news-bg">
+                            <!-- <span class="f-book">Blogs</span> -->
+                            <h6 class="f-light">Oct 2011 - Dec 2013</h6>
+                            <h6 class="f-light">Construction Period - <span style="display: inline;">27</span> MONTHS</h6>
+                            <h3 class="f-semibold" title="ARTICT LNG 2 PLANT"><a href="">FERTILIZER , MARY TURKMENISTAN</a></h3>
+                            <p class="f-light">Employer: <span style="display: inline;">Renaissance Heavy Industries, Pondera Industry</span></p>
+                            <div class="p-div">
+                                <p class="f-light">1. Erection of Pipe Rack Structure 100 MT</p>
+                                <p class="f-light">2. Erection of Boiler Water Wall Panel 12.000 WDI</p>
+                                <p class="f-light">3. Piping Fabrication and Erection 0.5" size to 32" Dia CS, SS, AL, of Total 46.000 WDI</p>
+                                <p class="f-light">4. Cable Laying of 300 Sqmm-3000M</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="img-wrap">
+                            <img src="./images/project 1.jpg" class="img-fluid" alt="">
+                        </div>
+                        <div class="news-bg">
+                            <!-- <span class="f-book">Blogs</span> -->
+                            <h6 class="f-light">Jan 2015 - Aug 2016</h6>
+                            <h6 class="f-light">Construction Period - <span style="display: inline;">20</span> MONTHS</h6>
+                            <h3 class="f-semibold" title="ARTICT LNG 2 PLANT"><a href="">PHOSAGRO AMMONIA , CHEREPOVETS</a></h3>
+                            <p class="f-light">Employer: <span style="display: inline;">Renaissance Heavy Industries, Pondera Industry</span></p>
+                            <div class="p-div">
+                                <p class="f-light">1. Erection of Utilities Building 300MT</p>
+                                <p class="f-light">2. Piping Fabrication and Erection 0.5" size to 24" Dia CS, SS, AL, of Total 30.000 WDI</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="img-wrap">
+                            <img src="./images/project 1.jpg" class="img-fluid" alt="">
+                        </div>
+                        <div class="news-bg">
+                            <!-- <span class="f-book">Blogs</span> -->
+                            <h6 class="f-light">Jan 2017 - Dec 2017</h6>
+                            <h6 class="f-light">Construction Period - <span style="display: inline;">12</span> MONTHS</h6>
+                            <h3 class="f-semibold" title="ARTICT LNG 2 PLANT"><a href="">YEMAL LNG, SEBETTA</a></h3>
+                            <p class="f-light">Employer: <span style="display: inline;">Renaissance Heavy Industries/Rega, JV Pondera Industry</span></p>
+                            <div class="p-div">
+                                <p class="f-light">1. Piping Fabrication and Erection 0.5" size to 32" Dia CS, SS, of Total 115,000 WDI</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="item">
+                        <div class="img-wrap">
+                            <img src="./images/project 1.jpg" class="img-fluid" alt="">
+                        </div>
+                        <div class="news-bg">
+                            <!-- <span class="f-book">Blogs</span> -->
+                            <h6 class="f-light">Nov 2018 - Jul 2020</h6>
+                            <h6 class="f-light">Construction Period - <span style="display: inline;">21</span> MONTHS</h6>
+                            <h3 class="f-semibold" title="ARTICT LNG 2 PLANT"><a href="">OMSK LNG, OMSK</a></h3>
+                            <p class="f-light">Employer: <span style="display: inline;">Renaissance Heavy Industries, Pondera Industry</span></p>
+                            <div class="p-div">
+                                <p class="f-light">1. Piping Fabrication and Erection 0.5" size to 32" Dia CS, SS, of Total 350,000 WDI</p>
+                                <p class="f-light">2. Pipe Support Fabrication and Erection 110 MT</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="item">
+                        <div class="img-wrap">
+                            <img src="./images/project 1.jpg" class="img-fluid" alt="">
+                        </div>
+                        <div class="news-bg">
+                            <!-- <span class="f-book">Blogs</span> -->
+                            <h6 class="f-light">Aug 2016 - Sep 2019</h6>
+                            <h6 class="f-light">Construction Period - <span style="display: inline;">38</span> MONTHS</h6>
+                            <h3 class="f-semibold" title="ARTICT LNG 2 PLANT"><a href="">SIBUR ZAPZSIB-2, TOBOLSK</a></h3>
+                            <p class="f-light">Employer: <span style="display: inline;">Renaissance Heavy Industries, Pondera Industry</span></p>
+                            <div class="p-div">
+                                <p class="f-light">1. Piping Fabrication and
+                                    Erection 594,000
+                                    WDI, (Including CS,SS,
+                                    AL,NI, Heavy Schedule
+                                    Materials Fittings
+                                    Instruments etc.,)
+                                </p>
+                                <p class="f-light">2. Utilities Building
+                                    structure Erection:
+                                    31.780 MT
+                                </p>
+
+                                <p class="f-light">3. Piping Support
+                                    Fabrication &
+                                    Erection 12.000MT
+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="item">
+                        <div class="img-wrap">
+                            <img src="./images/project 1.jpg" class="img-fluid" alt="">
+                        </div>
+                        <div class="news-bg">
+                            <!-- <span class="f-book">Blogs</span> -->
+                            <h6 class="f-light">Sep 2018 - Dec 2021</h6>
+                            <h6 class="f-light">Construction Period - <span style="display: inline;">28</span> MONTHS</h6>
+                            <h3 class="f-semibold" title="ARTICT LNG 2 PLANT"><a href="">AMURSKAYA GPP, SVOBODNY</a></h3>
+                            <p class="f-light">Employer: <span style="display: inline;">Renaissance Heavy Industries, Pondera Industry</span></p>
+                            <div class="p-div">
+                                <p class="f-light">1. Piping Fabrication and
+                                    Erection 750,000 WDI of
+                                    (Including CS,SS,AL,
+                                    Heavy Schedule Pipe up
+                                    to 56 size)
+
+                                </p>
+                                <p class="f-light">2. Utilities Building
+                                    Structure Erection:
+                                    13.000MT
+
+                                </p>
+
+                                <p class="f-light">3. Piping Support
+                                    Fabrication & Erection
+                                    15.000MT
+
+                                </p>
+
+                                <p class="f-light">4. Pipe Rack Structure
+                                    Erection 29.470MT
+
+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="item">
+                        <div class="img-wrap">
+                            <img src="./images/project 1.jpg" class="img-fluid" alt="">
+                        </div>
+                        <div class="news-bg">
+                            <!-- <span class="f-book">Blogs</span> -->
+                            <h6 class="f-light">Dec 2020 - Mar 2024</h6>
+                            <h6 class="f-light">Construction Period - <span style="display: inline;">28</span> MONTHS</h6>
+                            <h3 class="f-semibold" title="ARTICT LNG 2 PLANT"><a href="">ARCTIC LNG 2, MURMANSK/Closed due to War</a></h3>
+                            <p class="f-light">Employer: <span style="display: inline;">Renaissance Heavy
+                                    Industries, SARAN JV,
+                                    Pondera Industry
+                                </span></p>
+                            <div class="p-div">
+                                <p class="f-light">1. Piping Fabrication and
+                                    Erection 350,000 WDI
+                                </p>
+                                <p class="f-light">2. Module Building Structure
+                                    Erection: 6500MT
+                                    Complete above scope
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="item">
+                        <div class="img-wrap">
+                            <img src="./images/project 1.jpg" class="img-fluid" alt="">
+                        </div>
+                        <div class="news-bg">
+                            <!-- <span class="f-book">Blogs</span> -->
+                            <h6 class="f-light">Apr 2022 - Mar 2023</h6>
+                            <h6 class="f-light">Construction Period - <span style="display: inline;">12</span> MONTHS</h6>
+                            <h3 class="f-semibold" title="ARTICT LNG 2 PLANT"><a href="">SUHAIL PRODUCTION UNIT, QATAR</a></h3>
+                            <p class="f-light">Employer: <span style="display: inline;">SUHAIL
+                                    INDUSTRIAL HOLDING
+                                    GROUP
+
+                                </span></p>
+                            <div class="p-div">
+                                <p class="f-light">56 nos ( Skilled Foreman,
+                                    Welders, Fabricatior,
+                                    Helpers)
+
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="img-wrap">
+                            <img src="./images/project 1.jpg" class="img-fluid" alt="">
+                        </div>
+                        <div class="news-bg">
+                            <!-- <span class="f-book">Blogs</span> -->
+                            <h6 class="f-light">Dec 2022 - Mar 2024</h6>
+                            <h6 class="f-light">Construction Period - <span style="display: inline;">15</span> MONTHS</h6>
+                            <h3 class="f-semibold" title="ARTICT LNG 2 PLANT"><a href="">ARCTIC LNG 2, MURMANSK</a></h3>
+                            <p class="f-light">Employer: <span style="display: inline;">Renaissance
+                                    Heavy Industries,
+                                    ANASTROY
+                                </span></p>
+                            <div class="p-div">
+                                <p class="f-light">17 deployed yet
+                                    ( Skilled NAKS
+                                    Qualified Welders)
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="item">
+                        <div class="img-wrap">
+                            <img src="./images/project 1.jpg" class="img-fluid" alt="">
+                        </div>
+                        <div class="news-bg">
+                            <!-- <span class="f-book">Blogs</span> -->
+                            <h6 class="f-light">Apr 2023 - Mar 2024</h6>
+                            <h6 class="f-light">Construction Period - <span style="display: inline;">15</span> MONTHS</h6>
+                            <h3 class="f-semibold" title="ARTICT LNG 2 PLANT"><a href="">KAZAN Power, KAZAN</a></h3>
+                            <p class="f-light">Employer: <span style="display: inline;">PONDERA INDUSTRY </span></p>
+                            <div class="p-div">
+                                <p class="f-light">1. Piping Fabrication and Erection 100,000 WDI</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    <div class="item">
+                        <div class="img-wrap">
+                            <img src="./images/project 1.jpg" class="img-fluid" alt="">
+                        </div>
+                        <div class="news-bg">
+                            <!-- <span class="f-book">Blogs</span> -->
+                            <h6 class="f-light">Apr 2023 - Mar 2024</h6>
+                            <h6 class="f-light">Construction Period - <span style="display: inline;">12</span> MONTHS</h6>
+                            <h3 class="f-semibold" title="ARTICT LNG 2 PLANT"><a href="">IRSKUT Refinary, IRSKUT</a></h3>
+                            <p class="f-light">Employer: <span style="display: inline;">INNPO</span></p>
+                            <div class="p-div">
+                                <p class="f-light">1. Piping Fabrication and Erection 100,000 WDI </p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="img-wrap">
+                            <img src="./images/project 1.jpg" class="img-fluid" alt="">
+                        </div>
+                        <div class="news-bg">
+                            <!-- <span class="f-book">Blogs</span> -->
+                            <h6 class="f-light">Oct 2023 - Nov 2024</h6>
+                            <h6 class="f-light">Construction Period - <span style="display: inline;">12</span> MONTHS</h6>
+                            <h3 class="f-semibold" title="ARTICT LNG 2 PLANT"><a href="">Defence Project, Pune, India</a></h3>
+                            <p class="f-light">Employer: <span style="display: inline;">CORE ENERGY</span></p>
+                            <div class="p-div">
+                                <p class="f-light">1. Structural Fabrication 8,000 MT</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    <div class="item">
+                        <div class="img-wrap">
+                            <img src="./images/project 1.jpg" class="img-fluid" alt="">
+                        </div>
+                        <div class="news-bg">
+                            <!-- <span class="f-book">Blogs</span> -->
+                            <!-- <h6 class="f-light">Oct 2023 - Nov 2024</h6> -->
+                            <!-- <h6 class="f-light">Construction Period - <span style="display: inline;">12</span> MONTHS</h6> -->
+                            <h3 class="f-semibold" title="ARTICT LNG 2 PLANT"><a href="">Tarapur Atomic Power Station - 1 & 2</a></h3>
+                            <!-- <p class="f-light">Employer: <span style="display: inline;">CORE ENERGY</span></p> -->
+                            <div class="p-div">
+                                <p class="f-light">Tarapur, Boisar , Dist. Palghar, Maharashra, 401504</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="main-footer">
+          <div class="container ">
+            <div class="footer-wrapp">
+              <div class="column">
+                <div class="row">
+                  <div class="col-lg-3">
+                    <a href="#"><img src="./images/pavni-logo-2.png" style="max-width: 70px;height:auto;margin-top: 20px;margin-left: 25px;" class="img-fluid whitelogo" alt="logo"></a>
+                  </div>
+                  <div class="col-lg-7">
+                    <p class="f-light">
+                      Pavni Engineering
+                      Established in 2016,
+                      We provide 100% dedicated team to achieve our clients requirements for project-based hiring, contract
+                      staffing, recruitment solutions.</p>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="column">
+                <h4>QUICK LINKS</h4>
+                <a href="./index.html">Home</a>
+                <a href="./aboutus.html">About Us</a>
+                <a href="./services.html">Services</a>
+                <a href="./quality.html">Quality</a>
+                <a href="./clients.html">Clients</a>
+                <!-- <a href="#">Contact</a> -->
+              </div>
+              <div class="column">
+                <h4>CONTACT US</h4>
+                <div class="Contact-wrapper">
+    
+                  <a href="contact-us.html"><img src="./images/email-icon.png" class="img-fluid"
+                      alt="email">info@pavniengineering.com</a>
+                      <a href="contact-us.html"><img src="./images/phone-icon.png" class="img-fluid"
+                        alt="phone">044-35510968</a>
+                </div>
+                <div class="social-box">
+                  <a href="https://www.facebook.com" target="_blank" class="facebook" rel="noopener"><i
+                      class="fa fa-facebook" aria-hidden="true"></i></a>
+                  <a href="https://in.linkedin.com" target="_blank" class="linkedin" rel="noopener"><i
+                      class="fa fa-linkedin" aria-hidden="true"></i></a>
+                  <a href="https://twitter.com" target="_blank" class="twitter" rel="noopener"><i class="fa fa-twitter"
+                      aria-hidden="true"></i></a>
+                  <a href="https://www.instagram.com" target="_blank" class="insta" rel="noopener"><i
+                      class="fa fa-instagram" aria-hidden="true"></i></a>
+                </div>
+                <!-- <img src="https://nebulaaitsolutions.com/assets/images/microsoft-logo.webp" class="img-fluid" alt="microsoft-logo"> -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="btm-strip">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12 col-md-12" style="    text-align: center;">
+                <p>Copyright © 2024 | Reserved to PAVNI ENGINEERING PRIVATE LIMITED | Powered by Protontech.in</p>
+              </div>
+              <!-- <div class="col-lg-8 col-md-12 strip-pages">
+                  <a href="https://nebulaaitsolutions.com/faq">FAQ</a>
+                  <span class="dot">|</span>
+                  <a href="https://nebulaaitsolutions.com/sitemap">Sitemap</a>
+                  <span class="dot">|</span>
+                  <a href="https://nebulaaitsolutions.com/disclaimer">Disclaimer</a>
+                  <span class="dot">|</span>
+                  <a href="https://nebulaaitsolutions.com/terms-and-conditions">Terms & Conditions</a>
+                  <span class="dot">|</span>
+                  <a href="https://nebulaaitsolutions.com/gdpr-compliance">GDPR Compliance</a>
+                  <span class="dot">|</span>
+                  <a href="https://nebulaaitsolutions.com/privacy-policy">Privacy Policy</a>
+                </div> -->
+            </div>
+          </div>
+        </div>
+        <a href="#" class="top-arrow"><i class="fa fa-angle-up"></i></a>
+        <div class="clearfix"></div>
+        <!-- <img src="https://nebulaaitsolutions.com/assets/images/footer-element.svg" class="img-fluid footer-element" alt="footer element">
+          <img src="https://nebulaaitsolutions.com/assets/images/footer-element2.svg" class="img-fluid footer-element2" alt="footer element"> -->
+      </footer>
+
+</body>
